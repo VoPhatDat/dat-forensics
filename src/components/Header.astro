@@ -1,0 +1,78 @@
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">My Profile</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/write-up">Write Up</a></li>
+                <li><a href="/write-up">Pomodoro Timer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <style>
+        header {
+            position: sticky;
+            top: 0;
+            background-color: #181c24;
+            padding: 0.5rem 0;
+            margin: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        nav {
+            margin: 0 auto;
+            padding: 0 2rem;
+            justify-items: center;
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            
+            gap: 1rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            color: #fff; /* Màu chữ trắng */
+            text-decoration: none; /* Bỏ gạch dưới mặc định */
+            font-weight: 500; /* Độ đậm của chữ */
+            font-size: 1.05rem; /* Kích thước chữ */
+            padding: 0.5rem 1rem; /* Khoảng cách bên trong (trên dưới 0.5rem, trái phải 1rem) */
+            border-radius: 6px; /* Bo góc */ 
+            transition: background 0.2s, color 0.2s; /* Làm hiệu ứng mượt cho màu nền và chữ khi hover */
+            background: transparent; /* Nền trong suốt */
+            display: block; /* Cho thẻ <a> chiếm hết chiều ngang */
+            position: relative; /* Để có thể thêm hiệu ứng bằng ::after */
+        }
+
+        a::after {
+            content: ""; /* Tạo một phần tử "ảo" */
+            display: block; /* Cho nó hiển thị */
+            position: absolute; /* Đặt nó theo vị trí tuyệt đối so với thẻ <a> */
+            left: 1rem;
+            right: 1rem;
+            bottom: 0.3rem;
+            height: 2px;
+            background: #ffb347; /* Màu cam nhạt */
+            border-radius: 2px; /* Bo đầu thanh */
+            transform: scaleX(0); /* Ban đầu nó co lại, không thấy gì hết */
+            transition: transform 0.3s cubic-bezier(0.4,0,0.2,1); 
+            /* Tạo hiệu ứng chuyển đổi mượt khi scale */
+            transform-origin: center; /* Điểm bắt đầu scale là từ giữa */
+            pointer-events: none; /* Tránh ảnh hưởng đến click chuột */
+
+        }
+
+
+        a:hover::after, a:focus::after {
+            transform: scaleX(1); /* Lúc hover vào thì thanh dưới bung ra từ giữa sang 2 bên */
+            
+        }
+
+
+    </style>

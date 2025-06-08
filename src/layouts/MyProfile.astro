@@ -1,0 +1,290 @@
+---
+// Import các icon từ thư viện (ví dụ: Font Awesome hoặc React Icons)
+---
+
+<main>
+    <div class="profile-container">
+        <div class="block1">
+            <div class="profile-image" id="image"></div>
+            <div class="profile-contact" id="contact">
+                <div class="profile-socials" id="socials">
+                    <a href="https://facebook.com/yourprofile" class="social-link" target="_blank" rel="noopener">
+                        <img src="/icon/facebook.png" alt="Facebook" class="social-icon" />
+                        Facebook
+                    </a>
+                    <a href="https://twitter.com/yourprofile" class="social-link" target="_blank" rel="noopener">
+                        <img src="/icon/twitter.png" alt="Twitter" class="social-icon" />
+                        X
+                    </a>
+                    <a href="https://github.com/yourprofile" class="social-link" target="_blank" rel="noopener">
+                        <img src="/icon/github-sign.png" alt="GitHub" class="social-icon" />
+                        GitHub
+                    </a>
+                    <a href="https://youtube.com/yourprofile" class="social-link" target="_blank" rel="noopener">
+                        <img src="/icon/youtube.png" alt="YouTube" class="social-icon" />
+                        YouTube
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="block2 profile-personal-info" id="personal-info">
+            <h1>👋 Xin chào, mình là Đạt</h1>
+            <hr />
+            <ul>
+                <li>🎓 Hiện đang theo học <b>An toàn Thông tin</b> tại <i>Trường Đại học Công Thương TP.HCM</i>.</li>
+                <li>🔍 Mình đặc biệt quan tâm đến lĩnh vực <b>Digital Forensics</b> – nơi kết hợp giữa phân tích kỹ thuật và điều tra số để khám phá những bí ẩn trong thế giới mạng.</li>
+                <li>🌱 Đây là <b>không gian cá nhân</b> để mình lưu lại những kiến thức đã học và đang học.</li>
+            </ul>
+            <p>
+                Trang web vẫn đang trong quá trình xây dựng... <b>từng chút một</b>.<br />
+                <i>Mọi hành trình đều bắt đầu từ những bước đi đầu tiên.</i>
+            </p>
+            <p style="margin-top:2rem;">
+                P/S: bruh AI viết đấy chứ tôi không muốn chỗ này bỏ trống lol &lt;(")
+            </p>    
+        </div>
+
+    </div>
+</main>
+<style>
+    body {
+        font-family: 'Inter', sans-serif;;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #1a1f25 0%, #242b38 100%);
+        min-height: 100vh;
+    }
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 90vh;;
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+
+    .profile-container {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        width: 100%;
+        max-width: 1200px;
+        perspective: 1000px;
+        align-items: stretch; 
+        margin:auto 0;
+    }
+
+    .block1 {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 13rem; /*Chiều rộng cố định cho block1*/
+        height: fit-content;
+        max-width: 100%;
+        flex-shrink: 0;
+        box-sizing: border-box;
+
+    }
+
+    .block1:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+
+
+    .block2 {
+        flex: 1;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-sizing: border-box;;
+        height: auto;
+        min-width: 0; /* Đảm bảo không bị tràn khi nội dung dài */
+    }
+
+    .block2:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .profile-image {
+        width: 10rem;
+        height: 10rem;
+        background-image: url('/avatar/vophatdat.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        flex-shrink: 0;
+        position: relative;
+    }
+
+    .profile-image:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .profile-socials {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        
+    }
+
+    .social-link {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1.1rem;
+        color: #2a2a2a;
+        text-decoration: none;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        background: rgba(255, 255, 255, 0.5);
+        
+    }
+
+    .social-link:hover {
+        color: #0077ff;
+        background: rgba(0, 119, 255, 0.1);
+        transform: translateX(5px);
+    }
+
+
+    /* Sửa lại kích thước icon */
+    .social-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        transition: transform 0.3s ease;
+    }
+
+
+    .social-link:hover .social-icon {
+        transform: scale(1.15) rotate(5deg);
+    }
+
+    /* Thêm style cho nội dung block2 */
+    .block2 h1 {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+
+    .block2 hr {
+        margin: 1rem 0;
+        border: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .block2 ul {
+
+        padding-left: 1.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .block2 li {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+
+    /* Thêm overflow cho profile-socials */
+    .profile-socials {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        overflow: hidden;
+    }
+
+/* Responsive cho zoom cao và mobile */
+        @media (max-width: 768px), (max-height: 600px) {
+            main {
+                align-items: flex-start;
+                padding: 1rem;
+            }
+
+            .profile-container {
+                flex-direction: column;
+                gap: 1.5rem;
+                margin: 0;
+            }
+
+            .block1, .block2 {
+                width: 100%;
+                max-width: 100%;
+                min-width: 0;
+                padding: 1.5rem;
+            }
+
+            .block1 {
+                flex-direction: row;
+                align-items: center;
+                gap: 1.5rem;
+            }
+
+            .profile-image {
+                width: 8rem;
+                height: 8rem;
+            }
+
+            .profile-socials {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .social-link {
+                flex: 1;
+                min-width: fit-content;
+                justify-content: center;
+                font-size: 1rem;
+                padding: 0.6rem 0.8rem;
+            }
+
+            .block2 h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Điều chỉnh đặc biệt cho zoom rất cao */
+        @media (max-height: 400px) {
+            main {
+                padding: 0.5rem;
+            }
+
+            .profile-container {
+                gap: 1rem;
+            }
+
+            .block1, .block2 {
+                padding: 1rem;
+            }
+
+            .profile-image {
+                width: 6rem;
+                height: 6rem;
+            }
+
+            .block2 h1 {
+                font-size: 1.3rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .block2 li {
+                margin-bottom: 0.5rem;
+            }
+        }
+</style>
